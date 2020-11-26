@@ -21,7 +21,7 @@ class Session():
             data=payload)
 
         soup = bs4.BeautifulSoup(response.text, 'html.parser')
-        form = soup.find('form', attrs={'class': 'form2', 'method': 'post'})
+        form = soup.find('form', attrs={'class': 'full content', 'method': 'post'})
         action = form['action']
 
         # parse and login
